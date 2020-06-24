@@ -1,0 +1,26 @@
+
+.Persik {
+  width: 60%;
+  margin: auto 20%;
+  margin-bottom: 372px;
+}
+
+.background {
+	background-color: #232323;
+	color: white;
+
+}
+
+.cellback {
+	color: rgb(228, 228, 230);
+	margin-left: -12px;
+}
+
+.center {
+	margin: 0 35%;
+}
+
+.faq {
+	font-size: 25px;
+	margin-left: auto 0;
+}
