@@ -7,6 +7,9 @@ import '@vkontakte/vkui/dist/vkui.css';
 import Home from './panels/Home';
 import Persik from './panels/Persik';
 import Black from './panels/Black';
+import Teachers from './panels/Teachers';
+import Links from './panels/Links';
+
 
 
 const App = () => {
@@ -39,6 +42,8 @@ const App = () => {
 			<Home id='home' fetchedUser={fetchedUser} go={go} />
 			<Persik id='persik' go={go} />
 			<Black id='black' go={go} />
+			<Teachers id='teachers' go={go} />
+			<Links id='links' go={go} />
 		</View>
 	);
 }

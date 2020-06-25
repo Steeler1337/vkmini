@@ -8,27 +8,39 @@ import Cell from '@vkontakte/vkui/dist/components/Cell/Cell';
 import Div from '@vkontakte/vkui/dist/components/Div/Div';
 import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
 import {View, CellButton, Header} from '@vkontakte/vkui';
-import { platform, IOS } from '@vkontakte/vkui';
+import { platform, IOS, ActionSheet, ActionSheetItem } from '@vkontakte/vkui';
 import PanelHeaderButton from '@vkontakte/vkui/dist/components/PanelHeaderButton/PanelHeaderButton';
 import Icon28ChevronBack from '@vkontakte/icons/dist/28/chevron_back';
 import Icon24Back from '@vkontakte/icons/dist/24/back';
 import Link from '@material-ui/core/Link';
+import Icon28Profile from '@vkontakte/icons/dist/28/profile';
+import Icon28CameraOutline from '@vkontakte/icons/dist/28/camera_outline';
+import Button1 from '@material-ui/core/Button';
+import Dialog from '@material-ui/core/Dialog';
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogContentText from '@material-ui/core/DialogContentText';
+import DialogTitle from '@material-ui/core/DialogTitle';
+import Slide from '@material-ui/core/Slide';
 
 
 import persik from '../img/persik.png';
 import './Persik.css';
 
-const preventDefault = (event) => event.preventDefault();
+const osname = platform();
+
+
+
 
 const Home = ({ id, go, fetchedUser }) => (
+	
 	<Panel id={id}>
 		<Div className="background">
-		<PanelHeader theme="space_gray">Moscow Polytech FIT</PanelHeader>
+		<PanelHeader className = "ph" >Moscow Polytech FIT</PanelHeader>
 		{fetchedUser &&
 		<Group title="User Data Fetched with VK Bridge">
-		<Div className = "center">
+		<Div className = "benis"> 
 			<Cell
-			
 				before={fetchedUser.photo_200 ? <Avatar src={fetchedUser.photo_200}/> : null}
 				description={fetchedUser.city && fetchedUser.city.title ? fetchedUser.city.title : ''}
 			>
@@ -40,27 +52,33 @@ const Home = ({ id, go, fetchedUser }) => (
 		
 		</Group>}
 
-		<Group title="Navigation Example">
-			
-			
-			<Div style={{ background: '#232323' }}>
-				<Button  size="xl" level="2" mode = "overlay_secondary" href="https://new.mospolytech.ru/postupayushchim/priem-v-universitet/prohodnye-bally/" target="_blank" rel="nofollow noopener">		
-					Узнать проходные баллы
+		<Group header={<Header mode="secondary">Основное</Header>}>
+		<Div style={{ background: '#232323' }}>
+			<Button size="xl" level="2" mode = "overlay_secondary" onClick={go} data-to="teachers">
+				Преподаватели факультета
+			</Button>
+		</Div>
+			<Div style={{ background: '#232323' }} className="decor">
+				<Button  size="xl" level="2" mode = "overlay_primary" onClick={go} data-to="links">		
+					Полезные ссылки
 				</Button>
 			</Div>						
-			<Div className="faq" >
-				<CellButton onClick={go} data-to="black">FAQ</CellButton>
-			</Div>
+			
 		</Group>
-		<Group header={<Header mode="secondary">Растягивание по ширине</Header>}>
+		<Group className="separatorColor" header={<Header mode="secondary">Расписания</Header>}>
 			<Div style={{display: 'flex'}}>
-			<Button size="l" mode = "overlay_secondary" stretched style={{ marginRight: 8 }}>Stretched</Button>
-			<Button size="l" mode = "overlay_outline" stretched>Stretched</Button>
+			<Button href="https://rasp.dmami.ru/" target="_blank" rel="nofollow noopener" size="l" mode = "overlay_secondary" stretched style={{ marginRight: 8 }}>Расписание занятий</Button>
+			<Button href="https://rasp.dmami.ru/session" target="_blank" rel="nofollow noopener" size="l" mode = "overlay_outline" stretched>Расписание сессии</Button>
 			</Div>
 		</Group>
+	
+		<Div className="faq">
+				<CellButton style={{ textDecoration: 'none', color: 'rgb(228, 228, 230)' }} onClick={go} data-to="black">FAQ</CellButton>
+		</Div>
+
 		<img className="Persik" src={persik} alt="Persik The Cat"/>
 		
-		</Div>	
+		</Div>
 	</Panel>
 );
 

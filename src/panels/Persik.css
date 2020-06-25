@@ -1,13 +1,15 @@
 
+
 .Persik {
   width: 60%;
   margin: auto 20%;
-  margin-bottom: 372px;
+
 }
 
 .background {
 	background-color: #232323;
 	color: white;
+
 
 }
 
@@ -17,10 +19,47 @@
 }
 
 .center {
-	margin: 0 35%;
+
 }
 
 .faq {
 	font-size: 25px;
-	margin-left: auto 0;
+
+}
+
+.ph {
+	background-color: #ffffff
+}
+
+.margin {
+	margin-bottom: 2px;
+}
+
+.decor a {
+	text-decoration: none;
+}
+
+.decor a : hover {
+	color: #36393c;
+	cursor: pointer;
+}
+
+.PanelHeader {
+	--header_background: #232323;
+	--header_text: rgb(228, 228, 230);
+}
+
+:root {
+	--background_content: #232323;
+}
+
+.benis {
+margin-top: 0px;
+padding-top: 0px;
+margin-bottom: 0px;
+padding-bottom: 0px;
+}
+
+.Group>:not(.Header):first-child {
+margin-top: 0px;
 }
