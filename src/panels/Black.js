@@ -23,11 +23,11 @@ const osName = platform();
 
 const ExpansionPanel = withStyles({
   root: {
-	backgroundColor: 'rgba(245, 245, 245, 1)',
+	backgroundColor: 'rgba(228, 228, 230, 1)',
     border: '1px solid rgba(35, 35, 35, 1)',
     boxShadow: 'none',
     '&:not(:last-child)': {
-      borderBottom: '1px solid rgba(245, 245, 245, 1)',
+      borderBottom: '1px solid rgba(23, 23, 23, 1)',
     },
     '&:before': {
       display: 'none',
@@ -43,8 +43,8 @@ const ExpansionPanel = withStyles({
 
 const ExpansionPanelSummary = withStyles({
   root: {
-    backgroundColor: 'rgba(35, 35, 35, 1)',
-    borderBottom: '1px solid rgba(245, 245, 245, 1)',
+    backgroundColor: 'rgba(25, 25, 25, 1)',
+    borderBottom: '1px solid rgba(0, 0, 0, 0.12)',
     marginBottom: -1,
     minHeight: 56,
     '&$expanded': {
@@ -81,58 +81,87 @@ const Persik = props => (
 				{osName === IOS ? <Icon28ChevronBack/> : <Icon24Back/>}
 			</PanelHeaderButton>}
 		>
-			О нас
+			FAQ
 		</PanelHeader>
-		<div>
+		
       <ExpansionPanel onChange={handleChange('panel1')}>
         <ExpansionPanelSummary aria-controls="panel1d-content" id="panel1d-header">
-          <Typography>Collapsible Group Item #1</Typography>
+          <Typography>Какой наиболее удобный способ связаться с преподавателем?</Typography>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
           <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-            sit amet blandit leo lobortis eget. Lorem ipsum dolor sit amet, consectetur adipiscing
-            elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.
+            Телеграм. Ссылки на контакты можно найти во вкладке "Преподаватели факультета".
           </Typography>
         </ExpansionPanelDetails>
       </ExpansionPanel>
       <ExpansionPanel onChange={handleChange('panel2')}>
         <ExpansionPanelSummary aria-controls="panel2d-content" id="panel2d-header">
-          <Typography>Collapsible Group Item #2</Typography>
+          <Typography>Как получить свой сервер на домене Политеха?</Typography>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
           <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-            sit amet blandit leo lobortis eget. Lorem ipsum dolor sit amet, consectetur adipiscing
-            elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.
+            Нужно перейти по ссылке "Хостинг" во вкладке "Полезные ссылки". После этого
+			нужно подать заявку на получение сервера.
           </Typography>
         </ExpansionPanelDetails>
       </ExpansionPanel>
       <ExpansionPanel onChange={handleChange('panel3')}>
         <ExpansionPanelSummary aria-controls="panel3d-content" id="panel3d-header">
-          <Typography>Collapsible Group Item #3</Typography>
+          <Typography>Какие программы и утилиты следует установить для удобного процесса обучения? </Typography>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
           <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-            sit amet blandit leo lobortis eget. Lorem ipsum dolor sit amet, consectetur adipiscing
-            elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.
+            Для веб-разработки отлично подойдёт Visual Studio Code. Для программирования на C++ хорошим вариантом будет Visual Studio. Нередко встречается задание сделать презентацию,
+			и в этом вам поможет Office PowerPoint. Для составления отчётов и написания рефератов - Office Word. Google Документы отличная альтернатива всем продуктам Office, но для работы потребуется Интернет. 
           </Typography>
         </ExpansionPanelDetails>
       </ExpansionPanel>
 	  <ExpansionPanel onChange={handleChange('panel3')}>
-        <ExpansionPanelSummary aria-controls="panel3d-content" id="panel3d-header">
-          <Typography>Collapsible Group Item #4</Typography>
+        <ExpansionPanelSummary aria-controls="panel1d-content" id="panel1d-header">
+          <Typography>Знакомство с какими курсами облегчит начальный этап обучения на данном факультете? </Typography>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
           <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-            sit amet blandit leo lobortis eget. Lorem ipsum dolor sit amet, consectetur adipiscing
-            elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.
+            Как правило, многим первокурсникам тяжело даётся программирование. Для лучшего представления ООП рекомендуем пройти следующие курсы Stepik
+			(все ресуры можно найти во вкладке "Полезные ссылки") : "Введение в программирование (C++)" от Яндекс и ВШЭ, "Программирование на языке C++" от CSC.
           </Typography>
         </ExpansionPanelDetails>
       </ExpansionPanel>
-    </div>
+	   <ExpansionPanel onChange={handleChange('panel3')}>
+        <ExpansionPanelSummary aria-controls="panel1d-content" id="panel1d-header">
+          <Typography>Кем я смогу стать, когда успешно завершу обучение специальности ФИТа? </Typography>
+        </ExpansionPanelSummary>
+        <ExpansionPanelDetails>
+          <Typography>
+            Как правило, многим первокурсникам тяжело даётся программирование. Для лучшего представления ООП рекомендуем пройти следующие курсы Stepik
+			(все ресуры можно найти во вкладке "Полезные ссылки") : "Введение в программирование (C++)" от Яндекс и ВШЭ, "Программирование на языке C++" от CSC.
+          </Typography>
+        </ExpansionPanelDetails>
+      </ExpansionPanel>
+	  <ExpansionPanel onChange={handleChange('panel3')}>
+        <ExpansionPanelSummary aria-controls="panel1d-content" id="panel1d-header">
+          <Typography>Как проходит проектная деятельность на этом факультете? </Typography>
+        </ExpansionPanelSummary>
+        <ExpansionPanelDetails>
+          <Typography>
+            В основе обучения на Факультете Информационных Технологий лежит программирование, поэтому и ядром любого проекта станет кодинг. Безусловно, творческих подход 
+			также является неотъемлимой частью ПД на любом факультете. 		
+          </Typography>
+        </ExpansionPanelDetails>
+      </ExpansionPanel>
+	  <ExpansionPanel onChange={handleChange('panel3')}>
+        <ExpansionPanelSummary aria-controls="panel1d-content" id="panel1d-header">
+          <Typography>Как я могу проявить свои профессиональные навыки в Московском Политехе? </Typography>
+        </ExpansionPanelSummary>
+        <ExpansionPanelDetails>
+          <Typography>
+            Московский Политех сотрудничает с большим количеством передовых компаний. В рамках Хакатонов часто проходят мероприятия, где каждый студент 
+			может проявить себя и продемонстрировать своё мастерство.
+          </Typography>
+        </ExpansionPanelDetails>
+      </ExpansionPanel>
+	  
+	
 	
 	
  	

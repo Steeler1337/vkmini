@@ -54,10 +54,31 @@ const Links = props => (
 <ListItemText primary="Студенческий городок" />
 </ListItem>
 </a>
-<Divider light />
-<ListItem button>
-<ListItemText primary="Spam" />
+<a style={{ textDecoration: 'none', color: 'rgb(228, 228, 230)' }} href="http://profkommospolytech.ru/" target="_blank" rel="nofollow noopener" ><ListItem button divider>
+<ListItemText primary="Профсоюзная организация" />
 </ListItem>
+</a>
+<a style={{ textDecoration: 'none', color: 'rgb(228, 228, 230)' }} href="https://code.visualstudio.com/" target="_blank" rel="nofollow noopener" ><ListItem button divider>
+<ListItemText primary="Visual Studio Code" />
+</ListItem>
+</a>
+<a style={{ textDecoration: 'none', color: 'rgb(228, 228, 230)' }} href="https://visualstudio.microsoft.com/ru/" target="_blank" rel="nofollow noopener" ><ListItem button divider>
+<ListItemText primary="Visual Studio" />
+</ListItem>
+</a>
+<a style={{ textDecoration: 'none', color: 'rgb(228, 228, 230)' }} href="https://stepik.org/course/363/syllabus?auth=registration" target="_blank" rel="nofollow noopener" ><ListItem button divider>
+<ListItemText primary="Курс Введение в программирование (С++) от Яндекс и ВШЭ" />
+</ListItem>
+</a>
+<a style={{ textDecoration: 'none', color: 'rgb(228, 228, 230)' }} href="https://stepik.org/course/7/syllabus?auth=registration" target="_blank" rel="nofollow noopener" ><ListItem button divider>
+<ListItemText primary="Курс Программирование на языке С++ от Computer Science Center" />
+</ListItem>
+</a>
+
+
+
+<Divider light />
+
 </List>
 			
 			

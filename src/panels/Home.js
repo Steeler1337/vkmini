@@ -22,7 +22,11 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Slide from '@material-ui/core/Slide';
-
+import Icon16User from '@vkontakte/icons/dist/16/user';
+import Icon16Place from '@vkontakte/icons/dist/16/place';
+import Icon24Phone from '@vkontakte/icons/dist/24/phone';
+import Icon28MailOutline from '@vkontakte/icons/dist/28/mail_outline';
+import Icon28Message from '@vkontakte/icons/dist/28/message';
 
 import persik from '../img/persik.png';
 import './Persik.css';
@@ -43,22 +47,31 @@ const Home = ({ id, go, fetchedUser }) => (
 			<Cell
 				before={fetchedUser.photo_200 ? <Avatar src={fetchedUser.photo_200}/> : null}
 				description={fetchedUser.city && fetchedUser.city.title ? fetchedUser.city.title : ''}
+				
 			>
+			<Div style={{display: 'flex'}}>
 			<Div className = "cellback">
 				{`${fetchedUser.first_name} ${fetchedUser.last_name}`}
 			</Div>
+			<a style={{textDecoration: 'none', color: 'rgb(228,228,230)'}} href="https://e.mospolytech.ru/" target="_blank" rel="nofollow noopener">
+			<Div className="icon">
+			<Icon16User width={20} height={20}/>
+			</Div>
+			</a>
+			</Div>
+			
 			</Cell>
 		</Div>
 		
 		</Group>}
 
 		<Group header={<Header mode="secondary">Основное</Header>}>
-		<Div style={{ background: '#232323' }}>
+		<Div style={{ background: '#191919' }}>
 			<Button size="xl" level="2" mode = "overlay_secondary" onClick={go} data-to="teachers">
 				Преподаватели факультета
 			</Button>
 		</Div>
-			<Div style={{ background: '#232323' }} className="decor">
+			<Div style={{ background: '#191919' }} className="decor">
 				<Button  size="xl" level="2" mode = "overlay_primary" onClick={go} data-to="links">		
 					Полезные ссылки
 				</Button>
@@ -67,14 +80,35 @@ const Home = ({ id, go, fetchedUser }) => (
 		</Group>
 		<Group className="separatorColor" header={<Header mode="secondary">Расписания</Header>}>
 			<Div style={{display: 'flex'}}>
-			<Button href="https://rasp.dmami.ru/" target="_blank" rel="nofollow noopener" size="l" mode = "overlay_secondary" stretched style={{ marginRight: 8 }}>Расписание занятий</Button>
+			<Button href="https://rasp.dmami.ru/" target="_blank" rel="nofollow noopener" size="l" mode = "overlay_outline" stretched style={{ marginRight: 8 }}>Расписание занятий</Button>
 			<Button href="https://rasp.dmami.ru/session" target="_blank" rel="nofollow noopener" size="l" mode = "overlay_outline" stretched>Расписание сессии</Button>
 			</Div>
 		</Group>
-	
+
 		<Div className="faq">
-				<CellButton style={{ textDecoration: 'none', color: 'rgb(228, 228, 230)' }} onClick={go} data-to="black">FAQ</CellButton>
+			
+				<CellButton style={{ textDecoration: 'none', color: 'rgb(228, 228, 230)'}} onClick={go} data-to="black" stretched>FAQ</CellButton>
+				
 		</Div>
+				<Div className='contact' style={{color: 'rgb(228, 228, 230)' }}>
+					<ul>
+						<li style={{display: 'flex'}} className='contactElem'>
+							<Icon16Place width={20} height={20}/>
+							<a style={{textDecoration: 'none', color: 'rgb(228,228,230)'}} href="https://www.google.ru/maps/place/Московский+политехнический+университет/@55.7813318,37.7121353,16.5z/data=!4m5!3m4!1s0x46b54ad610abc8a5:0xc42703145fe53a8d!8m2!3d55.7814468!4d37.7112901" target="_blank" rel="nofollow noopener">107023 г. Москва ул. Б. Семёновская, 38</a>
+						</li>
+						<li style={{display: 'flex'}} className='contactElem'>
+							<Icon24Phone width={20} height={20}/>
+							<a style={{textDecoration: 'none', color: 'rgb(228,228,230)'}} href="tel:+79257817835" target="_blank" rel="nofollow noopener">+7 495 223-05-23, доб. 1709</a>
+						</li>
+						<li style={{display: 'flex'}} className='contactElem'>
+							<Icon28Message width={20} height={20}/>
+							<a style={{textDecoration: 'none', color: 'rgb(228,228,230)'}} href="mailto:marina_danshina@mail.ru" target="_blank" rel="nofollow noopener">fit@mospolytech.ru</a>
+						</li>
+					</ul>
+				</Div>
+				
+		
+		
 
 		<img className="Persik" src={persik} alt="Persik The Cat"/>
 		

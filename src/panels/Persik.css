@@ -7,7 +7,7 @@
 }
 
 .background {
-	background-color: #232323;
+	background-color: #191919;
 	color: white;
 
 
@@ -24,6 +24,9 @@
 
 .faq {
 	font-size: 25px;
+	padding-bottom: 0px;
+	width: 50%;
+
 
 }
 
@@ -45,12 +48,14 @@
 }
 
 .PanelHeader {
-	--header_background: #232323;
+	--header_background: #191919;
 	--header_text: rgb(228, 228, 230);
 }
 
 :root {
-	--background_content: #232323;
+	--background_content: #191919;
+
+
 }
 
 .benis {
@@ -62,4 +67,38 @@ padding-bottom: 0px;
 
 .Group>:not(.Header):first-child {
 margin-top: 0px;
+}
+
+.contact {
+	font-size: 15px;
+	padding-top: 0px;
+}
+
+.contactElem {
+	margin-bottom: 10px;
+	font-family: 'Nunito', sans-serif;
+	text-align: center;
+	
+}
+
+li {
+	list-style-type: none;
+}
+
+ul {
+	margin-left: 0px;
+	padding-left: 0px;
+	
+}
+
+.Cell__main {
+	--text_primary: rgb(228,228,230);
+}
+
+.icon {
+	padding-left: 0px;
+}
+
+.CellButton {
+	text-align: center;
 }

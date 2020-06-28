@@ -112,7 +112,7 @@ title="Преподаватель"
 />
 <CardContent>
 <Typography gutterBottom variant="h5" component="h2">
-Олеся Змазнева
+Змазнева Олеся
 </Typography>
 <Typography variant="body2" color="textSecondary" component="p">
 Руководитель лаборатории Soft Skills
@@ -136,7 +136,7 @@ title="Преподаватель"
 />
 <CardContent>
 <Typography gutterBottom variant="h5" component="h2">
-Андрей Филиппович
+Филиппович Андрей
 </Typography>
 <Typography variant="body2" color="textSecondary" component="p">
 Декан
